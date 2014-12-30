@@ -30,7 +30,7 @@ To set the comparator do the following:
 ```objective-c
 queue.comparator = ^NSComparisonResult(id<NSObject> obj1, id<NSObject> obj2) {
     /**
-     * Do you custom comparison here and return one of the following...
+     * Do your custom comparison here and return one of the following...
      *
      * NSOrderedAscending
      * NSOrderedDescending
