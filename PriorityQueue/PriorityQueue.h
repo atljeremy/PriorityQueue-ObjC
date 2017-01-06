@@ -48,21 +48,17 @@
  * Adds the specified object to the priority queue.
  *
  * @param object The object to be added.
- * @return YES if the object was added. NO if it couldn't be added.
- * @throws NSInternalInconsistencyException If the element cannot be compared with the elements in the
- *             priority queue using the ordering of the priority queue.
- * @throws NSInvalidArgumentException If {@code o} is {@code null}.
+ * @throws NSInternalInconsistencyException If the element cannot be compared with the elements in the priority queue using the ordering of the priority queue.
+ * @throws NSInvalidArgumentException If object is null.
  */
-- (BOOL)add:(id<NSObject>)object;
+- (void)add:(id<NSObject>)object;
 
 /**
  * Removes the specified object from the priority queue.
  *
  * @param object The object to be removed.
- * @return YES if the object was in the priority queue, NO if the object
- *         was not in the priority queue.
  */
-- (BOOL)remove:(id<NSObject>)object;
+- (void)remove:(id<NSObject>)object;
 
 /**
  * Gets but does not remove the head of the queue.

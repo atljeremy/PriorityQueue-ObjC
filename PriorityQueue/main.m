@@ -22,9 +22,9 @@ int main(int argc, const char * argv[]) {
         
         id<NSObject> object = [queue peek];
         
-        BOOL removed = [queue remove:@1];
-        removed = [queue remove:@3];
-        removed = [queue remove:@8];
+        [queue remove:@1];
+        [queue remove:@3];
+        [queue remove:@8];
 
         NSLog(@"Size: %lu", (unsigned long)queue.size);
         

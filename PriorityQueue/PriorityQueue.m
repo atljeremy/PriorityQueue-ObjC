@@ -60,16 +60,14 @@
     [self.queue removeAllObjects];
 }
 
-- (BOOL)add:(id<NSObject>)object
+- (void)add:(id<NSObject>)object
 {
-    [self insertObjectUsingBinarySearch:object];
-    return [self contains:object];
+    [self insert:object];
 }
 
-- (BOOL)remove:(id<NSObject>)object
+- (void)remove:(id<NSObject>)object
 {
     [self.queue removeObject:object];
-    return ![self contains:object];
 }
 
 - (id<NSObject>)peek
@@ -110,7 +108,7 @@
     }
 }
 
-- (void)insertObjectUsingBinarySearch:(id<NSObject>)object
+- (void)insert:(id<NSObject>)object
 {
     if (self.size == 0) {
         [self.queue addObject:object];
